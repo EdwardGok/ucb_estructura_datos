@@ -34,7 +34,70 @@ public class SimpleList <T> {
        } 
        System.out.println(" |. ");
     }
-
+    
+    public String getData(int i){
+        int aux=0;
+        Node Data=null;
+        for (Node current = first;current != null; current = current.getNext() ) {
+                
+                if (aux == i ) {
+                    Data=current;
+                    break;
+                }
+                aux++;
+            }
+        return Data.getData().toString();
+    }
+    public boolean contains(){
+        boolean ComeBack=false;
+        if(first!=null)
+        {
+            ComeBack=true;
+        }
+        return ComeBack;
+    }
+    public void remove (T data){
+        Node PreviousNode=null;
+        if(first.getData()==data)
+        {
+            first=first.getNext();
+        }
+        else
+        {
+            for(Node current=first; current!=null; current=current.getNext())
+            {
+                if(current.getData()==data)
+                {
+                    PreviousNode.setNext(current.getNext());
+                    break;
+                }
+                PreviousNode=current;
+            }
+        }
+    }
+    public void remove (int i)
+    {
+        int aux=0;
+        Node PreviousNode=null;
+        if(i==aux)
+        {
+            first=first.getNext();
+        }
+        else
+        {
+            for(Node current=first; current!=null; current=current.getNext())
+            {
+                if(aux==i)
+                {
+                    PreviousNode.setNext(current.getNext());
+                    break;
+                }
+                aux++;
+                PreviousNode=current;
+            }
+        }
+    }
+    
     // public getData(int i) //obtener un elemento
     // public contains(T data) // Retorna true si la lista contiene el elemento.
     // public remove(T data) // Remueve el elemento

@@ -16,11 +16,17 @@ public class App
     public static void main( String[] args ) {
         Teacher teacher1 = new Teacher("Orlando Rivera", "Ing. de Sistemas ");
         Teacher teacher2 = new Teacher("Miguel Villarroel", "Lic. en Informatica");
+        Teacher teacher3 = new Teacher("Roberto Martinez", "Ing. de Software");
 
         SimpleList<Teacher> teacherList = new SimpleList<>();
         teacherList.add(teacher1);
         teacherList.add(teacher2);
-        teacherList.print();
+        teacherList.add(teacher3);
+        //teacherList.print();
+        System.out.println(teacherList.getData(2));
+        teacherList.getData(1);
+        //teacherList.getData(0);
+       // teacherList.getData(2);
 
         System.out.println(" ====================  ");
 
@@ -33,11 +39,18 @@ public class App
         list.add(student2);
         list.add(student3);
         list.print();
+        list.remove(0);
+        list.print();
+        list.remove(1);
+        list.print();
+        //System.out.println(list.contains());
+        
 
         SimpleList<Date> dateList = new SimpleList<>();
         dateList.add(new Date());
         dateList.add(new Date());
-        dateList.print();
+        //dateList.print();
+        //System.out.println(dateList.contains());
     }
 
  //   public static void main( String[] args )
