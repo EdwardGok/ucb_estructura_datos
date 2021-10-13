@@ -39,8 +39,7 @@ public class SimpleList <T> {
         int aux=0;
         Node Data=null;
         for (Node current = first;current != null; current = current.getNext() ) {
-                
-                if (aux == i ) {
+                if (aux == i) {
                     Data=current;
                     break;
                 }
@@ -48,11 +47,13 @@ public class SimpleList <T> {
             }
         return Data.getData().toString();
     }
-    public boolean contains(){
+    public boolean contains(T data){
         boolean ComeBack=false;
-        if(first!=null)
-        {
-            ComeBack=true;
+        for (Node current = first;current != null; current = current.getNext() ) {
+            if (  data== current.getData()) {
+                ComeBack=true;
+                break;
+            }
         }
         return ComeBack;
     }

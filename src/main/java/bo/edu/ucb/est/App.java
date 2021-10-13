@@ -20,13 +20,13 @@ public class App
 
         SimpleList<Teacher> teacherList = new SimpleList<>();
         teacherList.add(teacher1);
-        teacherList.add(teacher2);
+        //teacherList.add(teacher2);
         teacherList.add(teacher3);
         //teacherList.print();
-        System.out.println(teacherList.getData(2));
+        System.out.println(teacherList.contains(teacher2));
         teacherList.getData(1);
         //teacherList.getData(0);
-       // teacherList.getData(2);
+        // teacherList.getData(2);
 
         System.out.println(" ====================  ");
 
@@ -39,7 +39,7 @@ public class App
         list.add(student2);
         list.add(student3);
         list.print();
-        list.remove(0);
+        list.remove(student1);
         list.print();
         list.remove(1);
         list.print();
